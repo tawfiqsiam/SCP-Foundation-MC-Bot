@@ -42,12 +42,31 @@ client.on('message', msg => {
   const cmd = args.shift().toLowerCase();
   
   //Command Starts
+  
+  //Help Command
   if (cmd == 'help') {
     var helpembed = new discord.MessageEmbed()
     .setTitle('Oops')
     .setDescription('The helpcommand is in building')
     .setColor('#eb3333');
   }
+  // Userinfo Command
+  if (cmd == 'userinfo') {
+    var errorembed = new discord.MessageEmbed()
+    const user = msg.mentions.users.first()
+    if(!user){
+      errorembed.setTitle('No no no')
+      errorembed.setDescription('Give me an user!')
+    }
+    var useriembed = new discord.MessageEmbed()
+    useriembed.setTitle(`Informaitons of ${user.tag}`)
+    useriembed.addField('Name:', `${user.username}#${user.discriminator}`)
+    useriembed.addField('ID:', `${user.id}`)
+    useriembed.addField('Joined discord at:', `${user.createdAt}`) 
+    useriembed.setColor('#00FFFF');
+    msg.channel.send(useriembed);
+  }
+
 });
 
 client.login('');
