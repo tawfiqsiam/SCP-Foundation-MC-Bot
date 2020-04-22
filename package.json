@@ -1,0 +1,20 @@
+{
+  "name": "scp-foundation-mc-bot",
+  "version": "1.5.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "ElektroPrinz",
+  "license": "LGPL-3.0",
+  "dependencies": {
+    "avconv": "^3.1.0",
+    "discord.js": "^12.2.0",
+    "ffmpeg-static": "^4.1.1",
+    "fs": "0.0.1-security",
+    "moment": "^2.24.0",
+    "opusscript": "0.0.7",
+    "ytdl-core-discord": "^1.2.0"
+  }
+}
