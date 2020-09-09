@@ -168,4 +168,4 @@ client.on('guildMemberRemove', member => {
   channel.send(`${member.displayName} leaved. Members: ${member.guild.memberCount}`);
 });
 
-client.login('');
+client.login('NTE4NTM5NzE1OTgxNjA2OTE0.DuSPxg.8JLYLQy9STry1Cd4B9-q85F2c3E');
